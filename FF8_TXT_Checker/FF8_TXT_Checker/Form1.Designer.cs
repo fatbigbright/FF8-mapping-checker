@@ -40,6 +40,18 @@
          this.txtFile2 = new System.Windows.Forms.TextBox();
          this.txtFile3 = new System.Windows.Forms.TextBox();
          this.txtFile4 = new System.Windows.Forms.TextBox();
+         this.txtFileJP1 = new System.Windows.Forms.TextBox();
+         this.txtFileJP2 = new System.Windows.Forms.TextBox();
+         this.txtFileJP3 = new System.Windows.Forms.TextBox();
+         this.txtFileJP4 = new System.Windows.Forms.TextBox();
+         this.lblFileNameJP1 = new System.Windows.Forms.Label();
+         this.lblFileNameJP2 = new System.Windows.Forms.Label();
+         this.lblFileNameJP3 = new System.Windows.Forms.Label();
+         this.lblFileNameJP4 = new System.Windows.Forms.Label();
+         this.lblFileName1 = new System.Windows.Forms.Label();
+         this.lblFileName2 = new System.Windows.Forms.Label();
+         this.lblFileName3 = new System.Windows.Forms.Label();
+         this.lblFileName4 = new System.Windows.Forms.Label();
          this.SuspendLayout();
          // 
          // lblGetMainDir
@@ -100,13 +112,13 @@
          this.lstMapping.FormattingEnabled = true;
          this.lstMapping.Location = new System.Drawing.Point(12, 113);
          this.lstMapping.Name = "lstMapping";
-         this.lstMapping.Size = new System.Drawing.Size(193, 394);
+         this.lstMapping.Size = new System.Drawing.Size(193, 836);
          this.lstMapping.TabIndex = 6;
          this.lstMapping.SelectedIndexChanged += new System.EventHandler(this.lstMapping_SelectedIndexChanged);
          // 
          // txtFile1
          // 
-         this.txtFile1.Location = new System.Drawing.Point(211, 113);
+         this.txtFile1.Location = new System.Drawing.Point(211, 547);
          this.txtFile1.Multiline = true;
          this.txtFile1.Name = "txtFile1";
          this.txtFile1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -115,7 +127,7 @@
          // 
          // txtFile2
          // 
-         this.txtFile2.Location = new System.Drawing.Point(472, 113);
+         this.txtFile2.Location = new System.Drawing.Point(472, 547);
          this.txtFile2.Multiline = true;
          this.txtFile2.Name = "txtFile2";
          this.txtFile2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -124,7 +136,7 @@
          // 
          // txtFile3
          // 
-         this.txtFile3.Location = new System.Drawing.Point(730, 113);
+         this.txtFile3.Location = new System.Drawing.Point(730, 547);
          this.txtFile3.Multiline = true;
          this.txtFile3.Name = "txtFile3";
          this.txtFile3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -133,18 +145,130 @@
          // 
          // txtFile4
          // 
-         this.txtFile4.Location = new System.Drawing.Point(1001, 113);
+         this.txtFile4.Location = new System.Drawing.Point(999, 547);
          this.txtFile4.Multiline = true;
          this.txtFile4.Name = "txtFile4";
          this.txtFile4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
          this.txtFile4.Size = new System.Drawing.Size(265, 394);
          this.txtFile4.TabIndex = 10;
          // 
+         // txtFileJP1
+         // 
+         this.txtFileJP1.Location = new System.Drawing.Point(211, 113);
+         this.txtFileJP1.Multiline = true;
+         this.txtFileJP1.Name = "txtFileJP1";
+         this.txtFileJP1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+         this.txtFileJP1.Size = new System.Drawing.Size(255, 394);
+         this.txtFileJP1.TabIndex = 11;
+         // 
+         // txtFileJP2
+         // 
+         this.txtFileJP2.Location = new System.Drawing.Point(472, 113);
+         this.txtFileJP2.Multiline = true;
+         this.txtFileJP2.Name = "txtFileJP2";
+         this.txtFileJP2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+         this.txtFileJP2.Size = new System.Drawing.Size(252, 394);
+         this.txtFileJP2.TabIndex = 12;
+         // 
+         // txtFileJP3
+         // 
+         this.txtFileJP3.Location = new System.Drawing.Point(730, 113);
+         this.txtFileJP3.Multiline = true;
+         this.txtFileJP3.Name = "txtFileJP3";
+         this.txtFileJP3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+         this.txtFileJP3.Size = new System.Drawing.Size(265, 394);
+         this.txtFileJP3.TabIndex = 13;
+         // 
+         // txtFileJP4
+         // 
+         this.txtFileJP4.Location = new System.Drawing.Point(1001, 113);
+         this.txtFileJP4.Multiline = true;
+         this.txtFileJP4.Name = "txtFileJP4";
+         this.txtFileJP4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+         this.txtFileJP4.Size = new System.Drawing.Size(265, 394);
+         this.txtFileJP4.TabIndex = 14;
+         // 
+         // lblFileNameJP1
+         // 
+         this.lblFileNameJP1.AutoSize = true;
+         this.lblFileNameJP1.Location = new System.Drawing.Point(211, 98);
+         this.lblFileNameJP1.Name = "lblFileNameJP1";
+         this.lblFileNameJP1.Size = new System.Drawing.Size(0, 13);
+         this.lblFileNameJP1.TabIndex = 15;
+         // 
+         // lblFileNameJP2
+         // 
+         this.lblFileNameJP2.AutoSize = true;
+         this.lblFileNameJP2.Location = new System.Drawing.Point(472, 98);
+         this.lblFileNameJP2.Name = "lblFileNameJP2";
+         this.lblFileNameJP2.Size = new System.Drawing.Size(0, 13);
+         this.lblFileNameJP2.TabIndex = 16;
+         // 
+         // lblFileNameJP3
+         // 
+         this.lblFileNameJP3.AutoSize = true;
+         this.lblFileNameJP3.Location = new System.Drawing.Point(727, 97);
+         this.lblFileNameJP3.Name = "lblFileNameJP3";
+         this.lblFileNameJP3.Size = new System.Drawing.Size(0, 13);
+         this.lblFileNameJP3.TabIndex = 17;
+         // 
+         // lblFileNameJP4
+         // 
+         this.lblFileNameJP4.AutoSize = true;
+         this.lblFileNameJP4.Location = new System.Drawing.Point(998, 97);
+         this.lblFileNameJP4.Name = "lblFileNameJP4";
+         this.lblFileNameJP4.Size = new System.Drawing.Size(0, 13);
+         this.lblFileNameJP4.TabIndex = 18;
+         // 
+         // lblFileName1
+         // 
+         this.lblFileName1.AutoSize = true;
+         this.lblFileName1.Location = new System.Drawing.Point(211, 531);
+         this.lblFileName1.Name = "lblFileName1";
+         this.lblFileName1.Size = new System.Drawing.Size(0, 13);
+         this.lblFileName1.TabIndex = 19;
+         // 
+         // lblFileName2
+         // 
+         this.lblFileName2.AutoSize = true;
+         this.lblFileName2.Location = new System.Drawing.Point(472, 531);
+         this.lblFileName2.Name = "lblFileName2";
+         this.lblFileName2.Size = new System.Drawing.Size(0, 13);
+         this.lblFileName2.TabIndex = 20;
+         // 
+         // lblFileName3
+         // 
+         this.lblFileName3.AutoSize = true;
+         this.lblFileName3.Location = new System.Drawing.Point(727, 531);
+         this.lblFileName3.Name = "lblFileName3";
+         this.lblFileName3.Size = new System.Drawing.Size(0, 13);
+         this.lblFileName3.TabIndex = 21;
+         // 
+         // lblFileName4
+         // 
+         this.lblFileName4.AutoSize = true;
+         this.lblFileName4.Location = new System.Drawing.Point(998, 531);
+         this.lblFileName4.Name = "lblFileName4";
+         this.lblFileName4.Size = new System.Drawing.Size(0, 13);
+         this.lblFileName4.TabIndex = 22;
+         // 
          // Form1
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(1284, 516);
+         this.ClientSize = new System.Drawing.Size(1276, 953);
+         this.Controls.Add(this.lblFileName4);
+         this.Controls.Add(this.lblFileName3);
+         this.Controls.Add(this.lblFileName2);
+         this.Controls.Add(this.lblFileName1);
+         this.Controls.Add(this.lblFileNameJP4);
+         this.Controls.Add(this.lblFileNameJP3);
+         this.Controls.Add(this.lblFileNameJP2);
+         this.Controls.Add(this.lblFileNameJP1);
+         this.Controls.Add(this.txtFileJP4);
+         this.Controls.Add(this.txtFileJP3);
+         this.Controls.Add(this.txtFileJP2);
+         this.Controls.Add(this.txtFileJP1);
          this.Controls.Add(this.txtFile4);
          this.Controls.Add(this.txtFile3);
          this.Controls.Add(this.txtFile2);
@@ -177,6 +301,18 @@
       private System.Windows.Forms.TextBox txtFile2;
       private System.Windows.Forms.TextBox txtFile3;
       private System.Windows.Forms.TextBox txtFile4;
+      private System.Windows.Forms.TextBox txtFileJP1;
+      private System.Windows.Forms.TextBox txtFileJP2;
+      private System.Windows.Forms.TextBox txtFileJP3;
+      private System.Windows.Forms.TextBox txtFileJP4;
+      private System.Windows.Forms.Label lblFileNameJP1;
+      private System.Windows.Forms.Label lblFileNameJP2;
+      private System.Windows.Forms.Label lblFileNameJP3;
+      private System.Windows.Forms.Label lblFileNameJP4;
+      private System.Windows.Forms.Label lblFileName1;
+      private System.Windows.Forms.Label lblFileName2;
+      private System.Windows.Forms.Label lblFileName3;
+      private System.Windows.Forms.Label lblFileName4;
    }
 }
 

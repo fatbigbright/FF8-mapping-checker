@@ -162,6 +162,18 @@ namespace FF8_TXT_Checker
          txtFile2.Text = string.Empty;
          txtFile3.Text = string.Empty;
          txtFile4.Text = string.Empty;
+         txtFileJP1.Text = string.Empty;
+         txtFileJP2.Text = string.Empty;
+         txtFileJP3.Text = string.Empty;
+         txtFileJP4.Text = string.Empty;
+         lblFileName1.Text = string.Empty;
+         lblFileName2.Text = string.Empty;
+         lblFileName3.Text = string.Empty;
+         lblFileName4.Text = string.Empty;
+         lblFileNameJP1.Text = string.Empty;
+         lblFileNameJP2.Text = string.Empty;
+         lblFileNameJP3.Text = string.Empty;
+         lblFileNameJP4.Text = string.Empty;
 
          ListBox lstMapping = sender as ListBox;
 
@@ -180,24 +192,29 @@ namespace FF8_TXT_Checker
          }
 
          string file1 = fileList[0];
-         ReadFileContent(file1, @"{0}\all_test_texts\m{1}\FL {2}.txt", this.txtFile1);
+         
+         ReadFileContent(file1, @"{0}\all_test_texts\{1}\FL {2}.txt", this.txtFileJP1,this.lblFileNameJP1);
+         ReadFileContent(file1, @"{0}\all_test_texts\m{1}\FL {2}.txt", this.txtFile1, this.lblFileName1);
 
          string file2 = fileList[1];
-         ReadFileContent(file2, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile2);
+         ReadFileContent(file2, @"{0}\all_test_texts\{1}\FL {2}.txt", this.txtFileJP2, this.lblFileNameJP2);
+         ReadFileContent(file2, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile2, this.lblFileName2);
 
          if (fileList.Length > 2)
          {
             string file3 = fileList[2];
-            ReadFileContent(file3, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile3);
+            ReadFileContent(file3, @"{0}\all_test_texts\{1}\FL {2}.txt", this.txtFileJP3, this.lblFileNameJP3);
+            ReadFileContent(file3, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile3, this.lblFileName3);
          }
          if (fileList.Length > 3)
          {
             string file4 = fileList[3];
-            ReadFileContent(file4, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile4);
+            ReadFileContent(file4, @"{0}\all_test_texts\{1}\FL {2}.txt", this.txtFileJP4, this.lblFileNameJP4);
+            ReadFileContent(file4, @"{0}\all_test_texts\c{1}\FL {2}.txt", this.txtFile4, this.lblFileName4);
          }
       }
 
-      private void ReadFileContent(string file, string filePathExpression, TextBox monitor)
+      private void ReadFileContent(string file, string filePathExpression, TextBox monitor, Label fileNameLabel)
       {
          string[] fileParts = file.Split(new char[] { '/' });
          if (fileParts.Length <= 0 || fileParts[0].Length > 1)
@@ -205,9 +222,14 @@ namespace FF8_TXT_Checker
             lblStatus.Text = "Format error in updates.txt";
             return;
          }
-         using (StreamReader fileReader = new StreamReader(
-            string.Format(filePathExpression, txtWorkspace.Text, fileParts[0], fileParts[1])
-            , Encoding.GetEncoding("gb2312")))
+         string fileName = string.Format(filePathExpression, txtWorkspace.Text, fileParts[0], fileParts[1]);
+         fileNameLabel.Text = fileName.Replace(string.Format(@"{0}\all_test_texts\", txtWorkspace.Text), "");
+         if (!File.Exists(fileName))
+         {
+            monitor.Text = string.Empty;
+            return;
+         }
+         using (StreamReader fileReader = new StreamReader(fileName, Encoding.GetEncoding("gb2312")))
          {
             monitor.Text = fileReader.ReadToEnd();
          }
